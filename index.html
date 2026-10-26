@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iGreen Energy | Economize até 20% na Conta de Luz Sem Obras e Sem Custos</title>
+    <meta name="description" content="Reduza sua conta de luz todos os meses com a Conexão Green da iGreen Energy. Energia solar por assinatura 100% digital, sem obras, sem investimento e sem fidelidade.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        igreen: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#00b84c', // Verde Vibrante Oficial iGreen
+                            600: '#00993f',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#042f1a', // Verde Escuro Institucional iGreen
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 30px -5px rgba(0, 184, 76, 0.45)',
+                        'glow-lg': '0 10px 40px -10px rgba(0, 184, 76, 0.6)',
+                        'card': '0 20px 40px -15px rgba(4, 47, 26, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Range Slider Styling */
+        input[type=range].igreen-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 999px;
+            outline: none;
+            transition: background 0.2s;
+        }
+        input[type=range].igreen-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #00b84c;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 184, 76, 0.5);
+            cursor: pointer;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        input[type=range].igreen-slider::-webkit-slider-thumb:hover {
+            transform: scale(1.12);
+            box-shadow: 0 6px 18px rgba(0, 184, 76, 0.7);
+        }
+        input[type=range].igreen-slider::-moz-range-thumb {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #00b84c;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 12px rgba(0, 184, 76, 0.5);
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+
+        /* Hero Mesh Background */
+        .hero-bg {
+            background-color: #042f1a;
+            background-image: 
+                radial-gradient(at 15% 20%, rgba(0, 184, 76, 0.28) 0px, transparent 50%),
+                radial-gradient(at 85% 15%, rgba(16, 185, 129, 0.2) 0px, transparent 45%),
+                radial-gradient(at 50% 90%, rgba(0, 184, 76, 0.18) 0px, transparent 55%);
+        }
+
+        /* Subtle Grid Overlay */
+        .bg-grid-pattern {
+            background-size: 36px 36px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+        }
+
+        /* Pulse animation for WhatsApp */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 184, 76, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 16px rgba(0, 184, 76, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 184, 76, 0); }
+        }
+        .wa-pulse {
+            animation: pulse-ring 2s infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00b84c;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-igreen-500 selection:text-white">
+
+    <!-- ==========================================
+         BARRA SUPERIOR DE REGULAMENTAÇÃO + CONFIGURAÇÃO DO LICENCIADO
+    =========================================== -->
+    <div class="bg-igreen-950 text-emerald-100 text-xs border-b border-emerald-900/60 py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-semibold bg-igreen-500/20 text-igreen-300 border border-igreen-500/30">
+                    <i class="fa-solid fa-shield-halved mr-1 text-igreen-400"></i> Lei Federal nº 14.300/22
+                </span>
+                <span class="hidden sm:inline text-emerald-200/80">
+                    Geração Compartilhada 100% Regulamentada pela ANEEL • Selo RA1000 Reclame Aqui
+                </span>
+            </div>
+
+            <div class="flex items-center gap-3 ml-auto">
+                <div class="hidden md:flex items-center gap-1.5 text-emerald-300/90">
+                    <i class="fa-solid fa-user-check text-igreen-400"></i>
+                    <span>Licenciado: <strong id="topBarConsultantName" class="text-white">Consultor Autorizado iGreen</strong></span>
+                    <span id="topBarConsultantCode" class="text-[11px] bg-emerald-900/80 px-1.5 py-0.5 rounded text-emerald-300">ID #Oficial</span>
+                </div>
+                <button onclick="openConfigModal()" class="inline-flex items-center gap-1.5 bg-emerald-900/90 hover:bg-emerald-800 text-emerald-100 px-2.5 py-1 rounded-md border border-emerald-700/60 transition text-xs font-medium cursor-pointer" title="Painel de Configuração do Licenciado iGreen">
+                    <i class="fa-solid fa-gear text-igreen-400"></i>
+                    <span>⚙️ Configurar Meu WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         HEADER / BARRA DE NAVEGAÇÃO FIXA
+    =========================================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo Estilizada iGreen Energy -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-igreen-500 to-igreen-800 flex items-center justify-center shadow-md group-hover:scale-105 transition">
+                    <svg class="w-7 h-7 text-white" viewBox="0 0 32 32" fill="none">
+                        <path d="M16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28C22.6274 28 28 22.6274 28 16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M26 6C19.5 6 14 11 14 18C21 18 26 12.5 26 6Z" fill="#a7f3d0" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M14 18L10 22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-1">
+                        <span class="font-display font-extrabold text-2xl tracking-tight text-igreen-950">iGreen</span>
+                        <span class="font-display font-bold text-2xl tracking-tight text-igreen-500">Energy</span>
+                    </div>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-slate-400 -mt-1">Licenciado Autorizado</span>
+                </div>
+            </a>
+
+            <!-- Links de Navegação Desktop -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-600">
+                <a href="#como-funciona" class="hover:text-igreen-500 transition">Como Funciona</a>
+                <a href="#simulador" class="hover:text-igreen-500 transition flex items-center gap-1">
+                    <span>Simulador de Economia</span>
+                    <span class="bg-igreen-100 text-igreen-700 text-[10px] font-bold px-1.5 py-0.5 rounded">Grátis</span>
+                </a>
+                <a href="#solucoes" class="hover:text-igreen-500 transition">Soluções</a>
+                <a href="#ecossistema" class="hover:text-igreen-500 transition">iGreen Club & Cashback</a>
+                <a href="#duvidas" class="hover:text-igreen-500 transition">Dúvidas (FAQ)</a>
+            </nav>
+
+            <!-- Botão CTA Principal Header -->
+            <div class="flex items-center gap-3">
+                <button onclick="triggerWhatsAppGeneral('header')" class="inline-flex items-center gap-2 bg-igreen-500 hover:bg-igreen-600 text-white font-display font-bold text-sm px-5 py-3 rounded-xl shadow-glow hover:shadow-glow-lg transition transform hover:-translate-y-0.5 cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span class="hidden sm:inline">Ativar Meu Desconto no WhatsApp</span>
+                    <span class="sm:hidden">Desconto WhatsApp</span>
+                </button>
+
+                <!-- Botão Menu Mobile -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-3 pb-5 space-y-2">
+            <a href="#como-funciona" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-igreen-50 hover:text-igreen-600">Como Funciona</a>
+            <a href="#simulador" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-igreen-50 hover:text-igreen-600">Simulador de Economia</a>
+            <a href="#solucoes" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-igreen-50 hover:text-igreen-600">Portfólio de Soluções</a>
+            <a href="#ecossistema" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-igreen-50 hover:text-igreen-600">iGreen Club & Cashback</a>
+            <a href="#duvidas" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-700 hover:bg-igreen-50 hover:text-igreen-600">Perguntas Frequentes</a>
+            <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+                <button onclick="openConfigModal(); toggleMobileMenu();" class="w-full py-2.5 px-4 rounded-xl bg-slate-100 text-slate-700 font-semibold text-xs flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-gear text-igreen-600"></i> Configurar WhatsApp do Consultor
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO SECTION DE ALTO IMPACTO
+    =========================================== -->
+    <section class="hero-bg relative overflow-hidden text-white pt-10 pb-20 lg:py-20">
+        <div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna Esquerda: Copywriting & Prova Social -->
+                <div class="lg:col-span-7 space-y-6">
+                    <!-- Badge Regulamentação -->
+                    <div class="inline-flex items-center gap-2.5 bg-emerald-900/70 border border-igreen-500/40 rounded-full px-4 py-1.5 text-xs sm:text-sm font-medium text-emerald-100 shadow-sm">
+                        <span class="w-2.5 h-2.5 rounded-full bg-igreen-400 animate-ping"></span>
+                        <span>100% Regulamentado pela <strong>Lei Federal nº 14.300/2022</strong> e <strong>ANEEL</strong></span>
+                    </div>
+
+                    <!-- Headline Principal -->
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[52px] leading-[1.12] tracking-tight">
+                        Economize até <span class="text-transparent bg-clip-text bg-gradient-to-r from-igreen-400 to-emerald-200 underline decoration-igreen-500/40">20% na sua Conta de Luz</span> Todos os Meses — Sem Obras e Sem Investimento!
+                    </h1>
+
+                    <!-- Subheadline explicando a Conexão Green -->
+                    <p class="text-emerald-100/90 text-base sm:text-lg leading-relaxed max-w-2xl">
+                        Com a <strong class="text-white">Conexão Green da iGreen Energy</strong>, você recebe créditos de energia limpa direto das nossas usinas solares na sua fatura atual. <span class="text-igreen-300 font-semibold">Sem instalar placas no telhado, sem taxa de adesão e sem fidelidade!</span>
+                    </p>
+
+                    <!-- Bullets de Benefícios Rápidos -->
+                    <div class="grid sm:grid-cols-2 gap-3 pt-1">
+                        <div class="flex items-center gap-2.5 text-sm text-emerald-100">
+                            <div class="w-6 h-6 rounded-full bg-igreen-500/20 border border-igreen-400 flex items-center justify-center text-igreen-400 shrink-0">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span>Ativação 100% Digital em 2 minutos</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-emerald-100">
+                            <div class="w-6 h-6 rounded-full bg-igreen-500/20 border border-igreen-400 flex items-center justify-center text-igreen-400 shrink-0">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span>Mesma distribuidora e mesma rede elétrica</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-emerald-100">
+                            <div class="w-6 h-6 rounded-full bg-igreen-500/20 border border-igreen-400 flex items-center justify-center text-igreen-400 shrink-0">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span>Acesso grátis ao <strong>iGreen Club (+60 mil lojas)</strong></span>
+                        </div>
+                        <div class="flex items-center gap-2.5 text-sm text-emerald-100">
+                            <div class="w-6 h-6 rounded-full bg-igreen-500/20 border border-igreen-400 flex items-center justify-center text-igreen-400 shrink-0">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <span>Zero multa ou fidelidade (livre adesão)</span>
+                        </div>
+                    </div>
+
+                    <!-- Botões de Ação no Hero -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <button onclick="triggerWhatsAppGeneral('hero')" class="inline-flex items-center justify-center gap-3 bg-igreen-500 hover:bg-igreen-400 text-igreen-950 font-display font-extrabold text-base px-7 py-4 rounded-2xl shadow-glow-lg transition transform hover:-translate-y-0.5 cursor-pointer">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Quero Ativar Meu Desconto Agora</span>
+                        </button>
+                        <a href="#simulador" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-display font-semibold text-base px-6 py-4 rounded-2xl transition">
+                            <i class="fa-solid fa-calculator text-igreen-400"></i>
+                            <span>Simular Minha Fatura</span>
+                        </a>
+                    </div>
+
+                    <!-- Indicadores Oficiais de Prova Social -->
+                    <div class="pt-6 border-t border-emerald-800/70 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="bg-emerald-900/40 border border-emerald-800/60 rounded-xl p-3.5">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-igreen-400">+250</div>
+                            <div class="text-xs text-emerald-200/80 font-medium mt-0.5">Usinas Solares Parceiras</div>
+                        </div>
+                        <div class="bg-emerald-900/40 border border-emerald-800/60 rounded-xl p-3.5">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-igreen-400">+300 Mil</div>
+                            <div class="text-xs text-emerald-200/80 font-medium mt-0.5">Clientes Conectados</div>
+                        </div>
+                        <div class="bg-emerald-900/40 border border-emerald-800/60 rounded-xl p-3.5">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-igreen-400">+21 Estados</div>
+                            <div class="text-xs text-emerald-200/80 font-medium mt-0.5">Cobertura Nacional</div>
+                        </div>
+                        <div class="bg-emerald-900/40 border border-emerald-800/60 rounded-xl p-3.5">
+                            <div class="font-display font-extrabold text-2xl sm:text-3xl text-igreen-400">R$ 0,00</div>
+                            <div class="text-xs text-emerald-200/80 font-medium mt-0.5">Zero Obras ou Custos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Card de Captura de Lead + Mini-Simulador Rápido -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-igreen-400/50 relative">
+                        <!-- Tag de Destaque -->
+                        <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-igreen-600 to-igreen-500 text-white text-xs font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-bolt"></i> Análise Gratuita em 1 Minuto
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-igreen-50 text-igreen-600 flex items-center justify-center text-xl font-bold shrink-0">
+                                <i class="fa-solid fa-solar-panel"></i>
+                            </div>
+                            <div>
+                                <h2 class="font-display font-extrabold text-xl text-slate-900">Calcule e Ative seu Desconto</h2>
+                                <p class="text-xs text-slate-500">Descubra quanto você vai economizar ainda este mês</p>
+                            </div>
+                        </div>
+
+                        <form id="heroLeadForm" onsubmit="submitHeroLead(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Seu Nome ou Empresa *</label>
+                                <div class="relative">
+                                    <i class="fa-regular fa-user absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                                    <input type="text" id="heroName" required placeholder="Ex: João Silva / Padaria Central" class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-800 focus:outline-none focus:border-igreen-500 focus:ring-2 focus:ring-igreen-500/20 transition">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Concessionária / UF *</label>
+                                    <select id="heroUtility" onchange="updateHeroMiniCalc()" class="w-full px-3.5 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-800 focus:outline-none focus:border-igreen-500">
+                                        <option value="CEMIG (MG)" data-rate="0.16">CEMIG (MG)</option>
+                                        <option value="EDP (ES / SP)" data-rate="0.15">EDP (ES / SP)</option>
+                                        <option value="CPFL (SP / RS)" data-rate="0.15">CPFL (SP / RS)</option>
+                                        <option value="Enel (SP / RJ / CE)" data-rate="0.15">Enel (SP / RJ / CE)</option>
+                                        <option value="Energisa (MT/MS/MG/PB/TO/RJ)" data-rate="0.15">Energisa (MT/MS/MG/PB/TO)</option>
+                                        <option value="Equatorial (GO/PA/MA/PI/AL/RS)" data-rate="0.15">Equatorial (GO/PA/MA/PI/RS)</option>
+                                        <option value="Neoenergia (PE/BA/RN/DF)" data-rate="0.15">Neoenergia (PE/BA/RN/DF)</option>
+                                        <option value="Light (RJ)" data-rate="0.15">Light (RJ)</option>
+                                        <option value="Copel (PR)" data-rate="0.15">Copel (PR)</option>
+                                        <option value="Celesc (SC)" data-rate="0.14">Celesc (SC)</option>
+                                        <option value="Outra Concessionária" data-rate="0.15">Outra Concessionária</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">Tipo de Imóvel</label>
+                                    <select id="heroPropertyType" onchange="updateHeroMiniCalc()" class="w-full px-3.5 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-800 focus:outline-none focus:border-igreen-500">
+                                        <option value="Residencial (CPF)">Residencial (CPF)</option>
+                                        <option value="Comercial / Empresa (CNPJ)">Comercial / PJ</option>
+                                        <option value="Condomínio">Condomínio</option>
+                                        <option value="Propriedade Rural">Rural / Agro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-1.5">
+                                    <label class="text-xs font-bold uppercase tracking-wider text-slate-600">Valor Médio da Conta de Luz</label>
+                                    <span id="heroBillBadge" class="text-base font-display font-extrabold text-igreen-600 bg-igreen-50 px-2.5 py-0.5 rounded-lg border border-igreen-200">R$ 450/mês</span>
+                                </div>
+                                <input type="range" id="heroBillRange" min="150" max="5000" step="50" value="450" oninput="updateHeroMiniCalc()" class="igreen-slider">
+                                <div class="flex justify-between text-[11px] text-slate-400 font-medium mt-1">
+                                    <span>R$ 150</span>
+                                    <span>R$ 1.500</span>
+                                    <span>R$ 3.000</span>
+                                    <span>R$ 5.000+</span>
+                                </div>
+                            </div>
+
+                            <!-- Resultado Instantâneo no Card -->
+                            <div class="bg-gradient-to-br from-igreen-950 to-igreen-900 rounded-2xl p-4 text-white border border-igreen-700/50">
+                                <div class="flex items-center justify-between border-b border-emerald-800/80 pb-3 mb-3">
+                                    <div>
+                                        <span class="text-[11px] uppercase tracking-wider text-emerald-300 block">Economia Estimada em 1 Ano</span>
+                                        <span id="heroAnnualSavings" class="font-display font-extrabold text-2xl sm:text-3xl text-igreen-400">R$ 864,00</span>
+                                    </div>
+                                    <div class="text-right">
+                                        <span class="text-[11px] uppercase tracking-wider text-emerald-300 block">Por Mês</span>
+                                        <span id="heroMonthlySavings" class="font-display font-bold text-lg text-white">~ R$ 72,00</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between text-xs text-emerald-200">
+                                    <span><i class="fa-solid fa-gift text-igreen-400 mr-1"></i> + Acesso gratuito ao <strong>iGreen Club</strong></span>
+                                    <span class="font-bold text-igreen-300">Elegível ✓</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-igreen-500 hover:bg-igreen-600 text-white font-display font-extrabold text-base py-4 px-6 rounded-xl shadow-glow hover:shadow-glow-lg transition flex items-center justify-center gap-2.5 cursor-pointer">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Receber Proposta no WhatsApp</span>
+                            </button>
+
+                            <p class="text-[11px] text-center text-slate-400 flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-lock text-igreen-600"></i> Seus dados estão seguros. Atendimento oficial sem compromisso.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FAIXA DE CONCESSIONÁRIAS ATENDIDAS
+    =========================================== -->
+    <section class="bg-white border-b border-slate-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">
+                Compatível com as principais distribuidoras de energia do Brasil
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5">
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> CEMIG</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> EDP</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> CPFL Energia</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> ENEL</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> ENERGISA</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> EQUATORIAL</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> NEOENERGIA</span>
+                <span class="px-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-display font-bold text-slate-700 flex items-center gap-2"><i class="fa-solid fa-plug-circle-check text-igreen-500"></i> COPEL & LIGHT</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SIMULADOR INTERATIVO DE ECONOMIA + DEMONSTRATIVO DE FATURA
+    =========================================== -->
+    <section id="simulador" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-igreen-100 text-igreen-800 mb-3">
+                    <i class="fa-solid fa-calculator"></i> Simulador Oficial iGreen Energy
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Conquiste o <span class="text-igreen-600">"13º Salário"</span> da sua Conta de Luz
+                </h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">
+                    Ajuste os controles abaixo de acordo com a sua fatura atual e veja como os créditos de energia solar injetados abatem o valor da sua conta todos os meses.
+                </p>
+            </div>
+
+            <!-- Grid Principal do Simulador -->
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Painel Esquerdo: Controles do Simulador (7 colunas) -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-9 shadow-card border border-slate-200/90 space-y-7">
+                    
+                    <!-- 1. Escolha do Tipo de Imóvel -->
+                    <div>
+                        <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-3">
+                            1. Selecione o Perfil da Unidade Consumidora
+                        </label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="simPropertyButtons">
+                            <button type="button" onclick="setSimProperty('Residencial', 0.15, this)" class="sim-prop-btn active-prop flex flex-col items-center justify-center p-3.5 rounded-2xl border-2 border-igreen-500 bg-igreen-50/70 text-igreen-950 font-bold text-xs transition cursor-pointer">
+                                <i class="fa-solid fa-house text-lg text-igreen-600 mb-1.5"></i>
+                                <span>Residencial</span>
+                            </button>
+                            <button type="button" onclick="setSimProperty('Comercial / PJ', 0.16, this)" class="sim-prop-btn flex flex-col items-center justify-center p-3.5 rounded-2xl border border-slate-200 hover:border-igreen-300 bg-slate-50 text-slate-700 font-semibold text-xs transition cursor-pointer">
+                                <i class="fa-solid fa-store text-lg text-slate-500 mb-1.5"></i>
+                                <span>Comercial / PJ</span>
+                            </button>
+                            <button type="button" onclick="setSimProperty('Condomínio', 0.16, this)" class="sim-prop-btn flex flex-col items-center justify-center p-3.5 rounded-2xl border border-slate-200 hover:border-igreen-300 bg-slate-50 text-slate-700 font-semibold text-xs transition cursor-pointer">
+                                <i class="fa-solid fa-building text-lg text-slate-500 mb-1.5"></i>
+                                <span>Condomínio</span>
+                            </button>
+                            <button type="button" onclick="setSimProperty('Rural / Agro', 0.18, this)" class="sim-prop-btn flex flex-col items-center justify-center p-3.5 rounded-2xl border border-slate-200 hover:border-igreen-300 bg-slate-50 text-slate-700 font-semibold text-xs transition cursor-pointer">
+                                <i class="fa-solid fa-tractor text-lg text-slate-500 mb-1.5"></i>
+                                <span>Rural / Agro</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 2. Seletor de Concessionária e Padrão do Relógio -->
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+                                2. Sua Concessionária
+                            </label>
+                            <select id="simUtilitySelect" onchange="calculateMainSimulator()" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 font-semibold text-sm text-slate-800 focus:outline-none focus:border-igreen-500">
+                                <option value="CEMIG (Minas Gerais)">CEMIG (Minas Gerais)</option>
+                                <option value="EDP (Espírito Santo / SP)">EDP (Espírito Santo / SP)</option>
+                                <option value="Enel (SP / RJ / CE)">Enel (SP / RJ / CE)</option>
+                                <option value="CPFL (Paulista / Piratininga / RGE)">CPFL (Paulista / Piratininga / RGE)</option>
+                                <option value="Energisa (MT / MS / MG / PB / TO / RJ)">Energisa (MT / MS / MG / PB / TO / RJ)</option>
+                                <option value="Neoenergia (Coelba / Celpe / Cosern / Elektro)">Neoenergia (PE / BA / RN / DF / SP)</option>
+                                <option value="Equatorial (GO / PA / MA / PI / AL / RS)">Equatorial (GO / PA / MA / PI / AL / RS)</option>
+                                <option value="Light (Rio de Janeiro)">Light (Rio de Janeiro)</option>
+                                <option value="Copel (Paraná)">Copel (Paraná)</option>
+                                <option value="Celesc (Santa Catarina)">Celesc (Santa Catarina)</option>
+                                <option value="Outras Concessionárias">Outras Concessionárias</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+                                3. Tipo de Ligação (Taxa Mínima)
+                            </label>
+                            <select id="simPhaseSelect" onchange="calculateMainSimulator()" class="w-full px-4 py-3.5 rounded-xl bg-slate-50 border border-slate-200 font-semibold text-sm text-slate-800 focus:outline-none focus:border-igreen-500">
+                                <option value="50">Bifásico (Média R$ 50 taxa mín.)</option>
+                                <option value="30">Monofásico (Média R$ 30 taxa mín.)</option>
+                                <option value="95">Trifásico (Média R$ 95 taxa mín.)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 3. Slider do Valor da Conta -->
+                    <div class="bg-slate-50 p-5 sm:p-6 rounded-2xl border border-slate-200/80">
+                        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-4">
+                            <label class="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                                4. Qual o valor médio da sua conta de luz?
+                            </label>
+                            <div class="font-display font-extrabold text-3xl sm:text-4xl text-igreen-600" id="simBillDisplay">
+                                R$ 600,00
+                            </div>
+                        </div>
+
+                        <input type="range" id="simBillSlider" min="150" max="10000" step="50" value="600" oninput="calculateMainSimulator()" class="igreen-slider mb-4">
+
+                        <!-- Atalhos de Valores Rápidos -->
+                        <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
+                            <span class="text-xs font-semibold text-slate-400">Escolha rápida:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <button type="button" onclick="setQuickBill(250)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-white border border-slate-200 hover:border-igreen-500 hover:text-igreen-600 transition cursor-pointer">R$ 250</button>
+                                <button type="button" onclick="setQuickBill(600)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-white border border-slate-200 hover:border-igreen-500 hover:text-igreen-600 transition cursor-pointer">R$ 600</button>
+                                <button type="button" onclick="setQuickBill(1200)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-white border border-slate-200 hover:border-igreen-500 hover:text-igreen-600 transition cursor-pointer">R$ 1.200</button>
+                                <button type="button" onclick="setQuickBill(3000)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-white border border-slate-200 hover:border-igreen-500 hover:text-igreen-600 transition cursor-pointer">R$ 3.000</button>
+                                <button type="button" onclick="setQuickBill(7500)" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-white border border-slate-200 hover:border-igreen-500 hover:text-igreen-600 transition cursor-pointer">R$ 7.500</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Cards de Resultado de Economia -->
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                            <span class="text-xs font-bold text-slate-400 uppercase block">Economia Mensal</span>
+                            <span id="resMonthly" class="font-display font-extrabold text-2xl text-slate-900 mt-1 block">R$ 82,50</span>
+                            <span class="text-[11px] text-igreen-600 font-semibold mt-1 block">Todo mês no bolso</span>
+                        </div>
+                        <div class="bg-igreen-50 rounded-2xl p-4 border-2 border-igreen-500 relative overflow-hidden">
+                            <span class="text-xs font-extrabold text-igreen-800 uppercase block">Economia em 1 Ano</span>
+                            <span id="resAnnual" class="font-display font-extrabold text-2xl sm:text-3xl text-igreen-600 mt-1 block">R$ 990,00</span>
+                            <span class="text-[11px] text-igreen-800 font-bold mt-1 block">🎉 O 13º da sua conta!</span>
+                        </div>
+                        <div class="bg-igreen-950 text-white rounded-2xl p-4 border border-igreen-800">
+                            <span class="text-xs font-bold text-emerald-300 uppercase block">Em 5 Anos</span>
+                            <span id="resFiveYears" class="font-display font-extrabold text-2xl text-igreen-400 mt-1 block">R$ 4.950,00</span>
+                            <span class="text-[11px] text-emerald-200/80 font-medium mt-1 block">Acumulado sem investir</span>
+                        </div>
+                    </div>
+
+                    <!-- Impacto Ambiental -->
+                    <div class="bg-emerald-50/70 rounded-2xl p-4 border border-emerald-200/80 flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-igreen-500 text-white flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold uppercase tracking-wider text-igreen-900">Seu Impacto Ambiental Anual</div>
+                                <div class="text-xs text-slate-600">Ao conectar sua conta a uma usina solar iGreen:</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <div>
+                                <span id="resTrees" class="font-display font-extrabold text-lg text-igreen-700">14 árvores</span>
+                                <span class="block text-[11px] text-slate-500">preservadas/ano</span>
+                            </div>
+                            <div class="border-l border-emerald-200 pl-6">
+                                <span id="resCO2" class="font-display font-extrabold text-lg text-igreen-700">540 kg</span>
+                                <span class="block text-[11px] text-slate-500">de CO₂ evitados</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel Direito: Demonstrativo Visual "Antes e Depois da Fatura" (5 colunas) -->
+                <div class="lg:col-span-5 bg-igreen-950 text-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-emerald-800/80 relative overflow-hidden">
+                    <div class="flex items-center justify-between border-b border-emerald-800 pb-4 mb-5">
+                        <div>
+                            <span class="text-[11px] uppercase tracking-widest font-bold text-igreen-400 block">Entenda na Prática</span>
+                            <h3 class="font-display font-extrabold text-xl text-white">Demonstrativo Antes vs. Depois</h3>
+                        </div>
+                        <span class="bg-igreen-500/20 text-igreen-300 border border-igreen-500/30 text-xs font-bold px-3 py-1 rounded-full">
+                            Auditoria ANEEL
+                        </span>
+                    </div>
+
+                    <!-- Comparativo Lado a Lado -->
+                    <div class="space-y-4">
+                        <!-- ANTES: Conta Tradicional -->
+                        <div class="bg-rose-950/40 border border-rose-500/30 rounded-2xl p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-rose-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-circle-xmark text-rose-400"></i> ANTES (Sem iGreen Energy)
+                                </span>
+                                <span id="billBeforeTotal" class="font-display font-extrabold text-xl text-rose-300 line-through">R$ 600,00</span>
+                            </div>
+                            <p class="text-xs text-rose-200/80">
+                                Você paga 100% da tarifa cheia da concessionária + bandeiras tarifárias caras (vermelha/amarela) sem nenhum retorno ou benefício.
+                            </p>
+                        </div>
+
+                        <!-- DEPOIS: Com Créditos Solares iGreen -->
+                        <div class="bg-emerald-900/50 border-2 border-igreen-400 rounded-2xl p-5 relative">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="text-xs font-extrabold uppercase tracking-wider text-igreen-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-circle-check text-igreen-400"></i> DEPOIS (Com Conexão Green)
+                                </span>
+                                <span class="bg-igreen-500 text-igreen-950 text-[11px] font-extrabold px-2 py-0.5 rounded">COM DESCONTO</span>
+                            </div>
+
+                            <!-- Linhas do Demonstrativo -->
+                            <div class="space-y-2.5 text-xs border-t border-emerald-800/80 pt-3">
+                                <div class="flex justify-between text-emerald-200">
+                                    <span>Consumo original na Distribuidora:</span>
+                                    <span id="demoOriginalBill" class="font-semibold">R$ 600,00</span>
+                                </div>
+                                <div class="flex justify-between text-igreen-300 font-semibold">
+                                    <span>(-) Créditos Solares Injetados iGreen:</span>
+                                    <span id="demoSolarCredits">- R$ 550,00</span>
+                                </div>
+                                <div class="flex justify-between text-emerald-100 pt-1 border-t border-emerald-800/50">
+                                    <span>1. Taxa Mínima / Ilum. Pública:</span>
+                                    <span id="demoMinTax" class="font-bold">R$ 50,00</span>
+                                </div>
+                                <div class="flex justify-between text-emerald-100">
+                                    <span>2. Energia Limpa iGreen (Com Desconto):</span>
+                                    <span id="demoIgreenBill" class="font-bold">R$ 467,50</span>
+                                </div>
+                            </div>
+
+                            <!-- Novo Total -->
+                            <div class="mt-4 pt-3 border-t border-emerald-700 flex items-baseline justify-between">
+                                <div>
+                                    <span class="text-xs text-emerald-300 block">Novo Valor Total c/ iGreen:</span>
+                                    <span class="text-[11px] text-igreen-300 font-semibold">Você economiza <strong id="demoSavedBadge">R$ 82,50/mês</strong></span>
+                                </div>
+                                <span id="billAfterTotal" class="font-display font-extrabold text-3xl text-igreen-400">R$ 517,50</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Explicação Rápida -->
+                    <div class="mt-4 bg-emerald-900/30 rounded-xl p-3.5 text-xs text-emerald-200/90 flex items-start gap-2.5">
+                        <i class="fa-solid fa-circle-info text-igreen-400 mt-0.5"></i>
+                        <span>
+                            <strong>Nota importante:</strong> Em diversas concessionárias (como faturas unificadas), o desconto já vem aplicado diretamente. Nossa equipe explica o modelo exato da sua região pelo WhatsApp!
+                        </span>
+                    </div>
+
+                    <!-- Botão CTA do Simulador -->
+                    <button onclick="triggerWhatsAppFromSimulator()" class="mt-6 w-full bg-igreen-500 hover:bg-igreen-400 text-igreen-950 font-display font-extrabold text-base py-4 px-6 rounded-2xl shadow-glow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2.5 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Garantir Essa Economia pelo WhatsApp</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PORTFÓLIO OFICIAL DE SOLUÇÕES IGREEN ENERGY
+    =========================================== -->
+    <section id="solucoes" class="py-20 bg-white border-t border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-igreen-100 text-igreen-800 mb-3">
+                    <i class="fa-solid fa-layer-group"></i> Portfólio Oficial iGreen Energy
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Uma Solução Sob Medida para Cada Perfil de Consumo
+                </h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">
+                    Da residência ao grande complexo industrial, a iGreen Energy possui a maior plataforma de soluções sustentáveis do Brasil.
+                </p>
+            </div>
+
+            <!-- Cards das 3 Conexões Principais -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Conexão Green (Mais Popular) -->
+                <div class="rounded-3xl bg-white border-2 border-igreen-500 shadow-card p-7 sm:p-8 flex flex-col justify-between relative">
+                    <div class="absolute -top-3.5 left-7 bg-igreen-500 text-white text-xs font-extrabold uppercase tracking-wider px-4 py-1 rounded-full shadow">
+                        ⭐ Mais Escolhido (CPF e CNPJ)
+                    </div>
+
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-igreen-50 text-igreen-600 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-igreen-600">Energia por Assinatura • Grupo B</span>
+                        <h3 class="font-display font-extrabold text-2xl text-slate-900 mt-1">Conexão Green</h3>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                            Ideal para residências, comércios, condomínios e propriedades rurais com contas a partir de <strong>R$ 150/mês</strong>. Receba créditos de nossas fazendas solares sem instalar nada.
+                        </p>
+
+                        <div class="my-6 p-4 rounded-2xl bg-igreen-50/80 border border-igreen-200">
+                            <span class="text-xs text-igreen-900 font-semibold block">Economia Garantida:</span>
+                            <span class="font-display font-extrabold text-2xl text-igreen-700">Até 15% a 20% OFF</span>
+                            <span class="text-[11px] text-slate-500 block">Todos os meses na fatura</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span><strong>Zero obras</strong>, zero placas e zero investimento</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span><strong>Sem fidelidade</strong> ou taxa de adesão</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span>Vale mesmo para <strong>imóveis alugados</strong> ou apartamentos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span>Inclui acesso grátis ao <strong>iGreen Club</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="triggerWhatsAppSolution('Conexão Green (Energia por Assinatura - Grupo B)')" class="w-full py-4 px-5 rounded-xl bg-igreen-500 hover:bg-igreen-600 text-white font-display font-bold text-sm shadow-glow transition flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Ativar Conexão Green</span>
+                    </button>
+                </div>
+
+                <!-- Card 2: Conexão Livre (Mercado Livre - Grupo A) -->
+                <div class="rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-card p-7 sm:p-8 flex flex-col justify-between relative">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-igreen-500/20 border border-igreen-500/40 text-igreen-400 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-igreen-400">Média e Alta Tensão • Grupo A</span>
+                        <h3 class="font-display font-extrabold text-2xl text-white mt-1">Conexão Livre</h3>
+                        <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                            Para empresas, indústrias, supermercados, hotéis e agronegócio conectados em média ou alta tensão (faturas acima de R$ 5.000 a R$ 10.000+).
+                        </p>
+
+                        <div class="my-6 p-4 rounded-2xl bg-emerald-950/80 border border-igreen-500/40">
+                            <span class="text-xs text-emerald-300 font-semibold block">Redução no Custo Energético:</span>
+                            <span class="font-display font-extrabold text-2xl text-igreen-400">Até 30% a 35% OFF</span>
+                            <span class="text-[11px] text-emerald-200/70 block">No Mercado Livre de Energia</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-200 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-400 mt-1"></i>
+                                <span><strong>Livre de Bandeiras Tarifárias</strong> e variações sazonais</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-400 mt-1"></i>
+                                <span>Previsibilidade orçamentária para o fluxo de caixa</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-400 mt-1"></i>
+                                <span>Gestão completa da migração junto à CCEE sem custo</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-400 mt-1"></i>
+                                <span>Certificado de Energia Renovável (Selo Verde / ESG)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="triggerWhatsAppSolution('Conexão Livre (Mercado Livre de Energia - Grupo A / Empresas)')" class="w-full py-4 px-5 rounded-xl bg-white hover:bg-igreen-50 text-igreen-950 font-display font-extrabold text-sm transition flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg text-igreen-600"></i>
+                        <span>Solicitar Estudo Grupo A</span>
+                    </button>
+                </div>
+
+                <!-- Card 3: Conexão Placas & Conexão Solar -->
+                <div class="rounded-3xl bg-white border border-slate-200 shadow-card p-7 sm:p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-amber-50 text-amber-500 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-solar-panel"></i>
+                        </div>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600">Geração Própria no Telhado ou Solo</span>
+                        <h3 class="font-display font-extrabold text-2xl text-slate-900 mt-1">Conexão Placas & Solar</h3>
+                        <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+                            Deseja ter sua própria usina solar no telhado da sua casa ou empresa? A iGreen realiza o projeto completo de engenharia, homologação e instalação.
+                        </p>
+
+                        <div class="my-6 p-4 rounded-2xl bg-amber-50/70 border border-amber-200">
+                            <span class="text-xs text-amber-900 font-semibold block">Economia com Sistema Próprio:</span>
+                            <span class="font-display font-extrabold text-2xl text-amber-600">Até 95% de Redução</span>
+                            <span class="text-[11px] text-slate-500 block">Valorização imediata do imóvel</span>
+                        </div>
+
+                        <ul class="space-y-3 text-sm text-slate-700 mb-8">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span>Equipamentos Tier-1 com <strong>garantia de até 25 anos</strong></span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span>Financiamento facilitado onde a parcela cabe na economia</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span>Projeto, instalação e homologação 100% inclusos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-igreen-500 mt-1"></i>
+                                <span>Monitoramento de geração em tempo real pelo App</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="triggerWhatsAppSolution('Conexão Placas / Solar (Orçamento de Kit Fotovoltaico Próprio)')" class="w-full py-4 px-5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-display font-bold text-sm transition flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg text-igreen-400"></i>
+                        <span>Orçar Projeto de Placas</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         DIFERENCIAIS EXCLUSIVOS DO ECOSSISTEMA (IGREEN CLUB + CASHBACK)
+    =========================================== -->
+    <section id="ecossistema" class="py-20 bg-igreen-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-igreen-500/20 text-igreen-300 border border-igreen-500/30 mb-3">
+                    <i class="fa-solid fa-gem"></i> Ecossistema Exclusivo de Benefícios
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                    Muito Além do Desconto na Conta: Você Ganha o <span class="text-igreen-400">iGreen Club</span> e Pode <span class="text-igreen-400">Zerar sua Fatura!</span>
+                </h2>
+                <p class="text-emerald-100/80 mt-3 text-base sm:text-lg">
+                    Ao ativar sua Conexão Green gratuitamente, você desbloqueia benefícios exclusivos que geram economia todos os dias.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- 1. iGreen Club -->
+                <div class="bg-emerald-900/40 backdrop-blur border border-emerald-800 rounded-3xl p-7 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-igreen-500 text-igreen-950 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-tags"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider bg-emerald-800/80 text-igreen-300 px-3 py-1 rounded-full">100% Gratuito p/ Clientes</span>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white">iGreen Club (+60.000 Parceiros)</h3>
+                        <p class="text-sm text-emerald-100/80 mt-2 leading-relaxed">
+                            O maior clube sustentável do Brasil. Economize até 60% em compras do dia a dia em milhares de estabelecimentos credenciados em todo o país:
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-2.5 my-5 text-xs">
+                            <div class="bg-emerald-950/60 border border-emerald-800/80 p-3 rounded-xl flex items-center gap-2">
+                                <i class="fa-solid fa-Capsules text-igreen-400"></i>
+                                <span>Drogarias & Farmácias</span>
+                            </div>
+                            <div class="bg-emerald-950/60 border border-emerald-800/80 p-3 rounded-xl flex items-center gap-2">
+                                <i class="fa-solid fa-film text-igreen-400"></i>
+                                <span>Cinemas & Lazer</span>
+                            </div>
+                            <div class="bg-emerald-950/60 border border-emerald-800/80 p-3 rounded-xl flex items-center gap-2">
+                                <i class="fa-solid fa-utensils text-igreen-400"></i>
+                                <span>Restaurantes & Fast-food</span>
+                            </div>
+                            <div class="bg-emerald-950/60 border border-emerald-800/80 p-3 rounded-xl flex items-center gap-2">
+                                <i class="fa-solid fa-cart-shopping text-igreen-400"></i>
+                                <span>Grandes Lojas Online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-emerald-800/70 text-xs text-igreen-300 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-circle-check"></i> Só os descontos em farmácia já pagam parte da sua conta!
+                    </div>
+                </div>
+
+                <!-- 2. Cashback Sustentável (Green Premia / Indique e Ganhe) -->
+                <div class="bg-gradient-to-b from-emerald-900/80 to-emerald-950 border-2 border-igreen-400 rounded-3xl p-7 flex flex-col justify-between relative">
+                    <div class="absolute -top-3.5 right-6 bg-igreen-400 text-igreen-950 text-xs font-extrabold uppercase px-3 py-1 rounded-full">
+                        🔥 Zere sua Conta de Luz
+                    </div>
+
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-igreen-400 text-igreen-950 flex items-center justify-center text-xl font-bold mb-5">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white">Cashback Sustentável</h3>
+                        <p class="text-sm text-emerald-100/90 mt-2 leading-relaxed">
+                            Com o programa <strong>Indique e Ganhe da iGreen</strong>, você recebe um link exclusivo no aplicativo. A cada amigo ou comércio indicado que ativa o desconto, você ganha bônus e cashback recorrente para abater na sua própria fatura!
+                        </p>
+
+                        <!-- Mini Simulador de Indicações -->
+                        <div class="my-5 bg-emerald-950/90 border border-emerald-700/80 rounded-2xl p-4">
+                            <div class="flex justify-between items-center text-xs mb-2">
+                                <span class="text-emerald-200 font-semibold">Amigos indicados por você:</span>
+                                <span id="refCountBadge" class="font-display font-extrabold text-base text-igreen-400">5 amigos</span>
+                            </div>
+                            <input type="range" id="refSlider" min="1" max="30" value="5" oninput="updateReferralCalc()" class="igreen-slider mb-3">
+                            <div class="flex justify-between items-center pt-2 border-t border-emerald-800/80 text-xs">
+                                <span class="text-emerald-300">Bônus + Cashback Estimado:</span>
+                                <span id="refBonusResult" class="font-display font-extrabold text-lg text-white">Até R$ 400+/ano em créditos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="triggerWhatsAppSolution('Conexão Green + Programa de Cashback Sustentável (Quero economizar e indicar)')" class="w-full py-3.5 px-4 rounded-xl bg-igreen-500 hover:bg-igreen-400 text-igreen-950 font-display font-extrabold text-xs uppercase tracking-wider transition cursor-pointer">
+                        Quero Desconto + Cashback Sustentável
+                    </button>
+                </div>
+
+                <!-- 3. App iGreen + Ecossistema Telecom & Seguros -->
+                <div class="bg-emerald-900/40 backdrop-blur border border-emerald-800 rounded-3xl p-7 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-5">
+                            <div class="w-12 h-12 rounded-2xl bg-igreen-500 text-igreen-950 flex items-center justify-center text-xl font-bold">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <span class="text-xs font-bold uppercase tracking-wider bg-emerald-800/80 text-igreen-300 px-3 py-1 rounded-full">iOS & Android</span>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white">App iGreen & Ecossistema</h3>
+                        <p class="text-sm text-emerald-100/80 mt-2 leading-relaxed">
+                            Acompanhe tudo em tempo real na palma da sua mão com transparência total e suporte humano integrado:
+                        </p>
+
+                        <ul class="space-y-3 my-5 text-sm text-emerald-100">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-chart-line text-igreen-400"></i>
+                                <span>Histórico mensal de economia e kWh compensados</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-file-invoice-dollar text-igreen-400"></i>
+                                <span>2ª via de faturas, PIX copia e cola e relatórios</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-tower-cell text-igreen-400"></i>
+                                <span>Acesso a planos <strong>iGreen Telecom 5G</strong> e <strong>Conexão Seguros</strong></span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-trophy text-igreen-400"></i>
+                                <span>Sorteios mensais exclusivos para membros ativos</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-4 border-t border-emerald-800/70 flex items-center justify-between text-xs text-emerald-200">
+                        <span><i class="fa-solid fa-medal text-amber-400 mr-1"></i> Selo RA1000 Reclame Aqui</span>
+                        <span class="font-bold text-white">Nota 4.9 ★</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         COMO FUNCIONA EM 4 PASSOS SIMPLES
+    =========================================== -->
+    <section id="como-funciona" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-igreen-100 text-igreen-800 mb-3">
+                    <i class="fa-solid fa-bolt"></i> Processo 100% Digital e Sem Burocracia
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
+                    Como Funciona em 4 Passos Simples
+                </h2>
+                <p class="text-slate-600 mt-3 text-base sm:text-lg">
+                    A mesma energia, a mesma distribuidora e a mesma rede elétrica — porém muito mais inteligente e barata.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+                <!-- Passo 1 -->
+                <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200/80 relative group hover:border-igreen-500 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-igreen-500 text-white font-display font-extrabold text-xl flex items-center justify-center shadow-md mb-5">
+                        01
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Envie sua Conta pelo WhatsApp</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Você nos envia uma foto ou PDF da sua conta de luz atual pelo WhatsApp para fazermos a análise gratuita de elegibilidade e cálculo do seu desconto.
+                    </p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200/80 relative group hover:border-igreen-500 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-igreen-500 text-white font-display font-extrabold text-xl flex items-center justify-center shadow-md mb-5">
+                        02
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Conexão Digital à Usina Solar</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Sem nenhuma obra ou visita técnica, conectamos digitalmente sua unidade consumidora a uma fazenda solar certificada da iGreen no seu estado.
+                    </p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="bg-slate-50 rounded-3xl p-7 border border-slate-200/80 relative group hover:border-igreen-500 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-igreen-500 text-white font-display font-extrabold text-xl flex items-center justify-center shadow-md mb-5">
+                        03
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Injeção na Rede da Concessionária</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Nossa usina solar injeta energia limpa diretamente na rede da sua concessionária local (CEMIG, EDP, CPFL, Enel, Energisa, etc.), gerando créditos para seu CPF/CNPJ.
+                    </p>
+                </div>
+
+                <!-- Passo 4 -->
+                <div class="bg-igreen-50 rounded-3xl p-7 border-2 border-igreen-500 relative">
+                    <div class="w-12 h-12 rounded-2xl bg-igreen-600 text-white font-display font-extrabold text-xl flex items-center justify-center shadow-md mb-5">
+                        04
+                    </div>
+                    <h3 class="font-display font-bold text-lg text-igreen-950 mb-2">Economia Todo Mês + iGreen Club</h3>
+                    <p class="text-sm text-igreen-900/80 leading-relaxed">
+                        Pronto! Os créditos solares abatem sua fatura mensalmente com desconto garantido e seu acesso ao <strong>iGreen Club</strong> é liberado imediatamente!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Banner Chamada Rápida -->
+            <div class="mt-12 bg-gradient-to-r from-igreen-950 via-igreen-900 to-igreen-800 rounded-3xl p-8 sm:p-10 text-white flex flex-col lg:flex-row items-center justify-between gap-6 shadow-xl">
+                <div class="space-y-2 text-center lg:text-left">
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-igreen-400">Pronto para começar a economizar?</span>
+                    <h3 class="font-display font-extrabold text-2xl sm:text-3xl">Tem uma conta de luz em mãos agora?</h3>
+                    <p class="text-sm text-emerald-100/90 max-w-xl">
+                        Fale diretamente com nosso atendimento autorizado pelo WhatsApp e descubra em 1 minuto qual o percentual exato liberado para o seu CEP.
+                    </p>
+                </div>
+                <button onclick="triggerWhatsAppGeneral('banner_passos')" class="shrink-0 bg-igreen-500 hover:bg-igreen-400 text-igreen-950 font-display font-extrabold text-base px-8 py-4 rounded-2xl shadow-glow-lg transition flex items-center gap-3 cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span>Enviar Foto da Conta pelo WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PERGUNTAS FREQUENTES (FAQ OFICIAL INTERATIVO)
+    =========================================== -->
+    <section id="duvidas" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider bg-igreen-100 text-igreen-800 mb-3">
+                    <i class="fa-solid fa-circle-question"></i> Tire Todas as Suas Dúvidas
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+                    Perguntas Frequentes sobre a iGreen Energy
+                </h2>
+                <p class="text-slate-600 mt-2 text-base">
+                    Transparência total para você economizar com 100% de segurança jurídica.
+                </p>
+            </div>
+
+            <div class="space-y-4" id="faqContainer">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(0)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-slate-900 hover:text-igreen-600 transition cursor-pointer">
+                        <span>1. Preciso fazer obras ou instalar placas solares em casa?</span>
+                        <i id="faqIcon-0" class="fa-solid fa-chevron-down text-igreen-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faqContent-0" class="px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                        <strong>Não! Na modalidade Conexão Green (energia por assinatura), não há nenhuma obra, furo ou instalação no seu imóvel.</strong> Toda a energia limpa é gerada nas fazendas solares parceiras da iGreen Energy e injetada diretamente na rede da sua distribuidora local. Por isso, funciona perfeitamente inclusive para quem mora em apartamento ou imóvel alugado.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(1)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-slate-900 hover:text-igreen-600 transition cursor-pointer">
+                        <span>2. Tem fidelidade, multa de cancelamento ou taxa de adesão?</span>
+                        <i id="faqIcon-1" class="fa-solid fa-chevron-down text-igreen-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faqContent-1" class="hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                        <strong>Zero taxa de adesão e sem fidelidade na Conexão Green!</strong> Você não paga absolutamente nada para aderir nem para ativar seu benefício. Caso um dia queira cancelar ou mude de endereço, basta avisar ao nosso suporte com o prazo regulamentar da distribuidora para desvinculação dos créditos, sem nenhuma multa rescisória.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(2)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-slate-900 hover:text-igreen-600 transition cursor-pointer">
+                        <span>3. E se acabar a luz na minha rua, quem me atende? Corro risco de ficar sem energia?</span>
+                        <i id="faqIcon-2" class="fa-solid fa-chevron-down text-igreen-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faqContent-2" class="hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                        <strong>Sua distribuidora local continua sendo exatamente a mesma!</strong> Os cabos, postes, transformadores e o relógio medidor continuam sob responsabilidade da sua concessionária (CEMIG, EDP, Enel, CPFL, Energisa, etc.). Mesmo em dias chuvosos ou à noite, você recebe energia normalmente 24h por dia pela rede elétrica. A iGreen entra apenas para injetar créditos solares que deixam sua conta mais barata.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(3)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-slate-900 hover:text-igreen-600 transition cursor-pointer">
+                        <span>4. Quem pode aderir à Conexão Green? Quais são as regras de elegibilidade?</span>
+                        <i id="faqIcon-3" class="fa-solid fa-chevron-down text-igreen-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faqContent-3" class="hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                        Podem aderir tanto <strong>Pessoas Físicas (CPF)</strong> quanto <strong>Pessoas Jurídicas (CNPJ)</strong> cuja conta média mensal seja a partir de <strong>R$ 150 (monofásico)</strong>, <strong>R$ 180 (bifásico)</strong> ou <strong>R$ 250 (trifásico)</strong>, dependendo da concessionária. Não são elegíveis contas cadastradas na Tarifa Social (Baixa Renda) ou que já possuam geração solar própria suprindo 100% do consumo.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(4)" class="w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-slate-900 hover:text-igreen-600 transition cursor-pointer">
+                        <span>5. Como fica o pagamento da conta após a ativação?</span>
+                        <i id="faqIcon-4" class="fa-solid fa-chevron-down text-igreen-500 transition-transform duration-200"></i>
+                    </button>
+                    <div id="faqContent-4" class="hidden px-6 pb-5 text-sm text-slate-600 leading-relaxed">
+                        É super simples e transparente: dependendo da concessionária da sua região, você passa a ter a compensação direto em fatura unificada ou recebe a fatura mínima da distribuidora (referente apenas à taxa de disponibilidade/iluminação pública) e o boleto da iGreen referente à energia limpa consumida já com o seu desconto aplicado. A soma final será sempre menor do que você pagaria sem a iGreen!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CARTÃO DE IDENTIFICAÇÃO DO CONSULTOR + RODAPÉ
+    =========================================== -->
+    <footer class="bg-igreen-950 text-emerald-100 pt-16 pb-24 border-t border-emerald-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Card do Licenciado Oficial -->
+            <div class="bg-emerald-900/50 border border-emerald-700/70 rounded-3xl p-6 sm:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+                    <div class="w-16 h-16 rounded-2xl bg-igreen-500 text-igreen-950 flex items-center justify-center text-2xl font-extrabold shadow-glow shrink-0">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 bg-igreen-500/20 text-igreen-300 text-xs font-bold px-2.5 py-0.5 rounded-md border border-igreen-500/30 mb-1">
+                            <i class="fa-solid fa-certificate"></i> Atendimento Oficial Personalizado
+                        </div>
+                        <h3 id="footerConsultantName" class="font-display font-extrabold text-xl text-white">Consultor Autorizado iGreen Energy</h3>
+                        <p class="text-xs text-emerald-200/80 mt-0.5">
+                            Código de Licenciado: <strong id="footerConsultantCode" class="text-igreen-300">ID #Oficial</strong> • WhatsApp: <strong id="footerConsultantPhone" class="text-white">(31) 99999-9999</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-3">
+                    <button onclick="triggerWhatsAppGeneral('footer_card')" class="bg-igreen-500 hover:bg-igreen-400 text-igreen-950 font-display font-extrabold text-sm px-6 py-3.5 rounded-xl shadow-glow transition flex items-center gap-2 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Falar com o Consultor no WhatsApp</span>
+                    </button>
+                    <a id="footerReferralLinkBtn" href="#simulador" target="_blank" rel="noopener noreferrer" class="hidden bg-emerald-800 hover:bg-emerald-700 text-white font-display font-bold text-sm px-5 py-3.5 rounded-xl border border-emerald-600 transition items-center gap-2">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span>Cadastro Digital Direto</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links e Informações Legais -->
+            <div class="grid md:grid-cols-4 gap-8 pb-10 border-b border-emerald-900/80 text-sm">
+                <div class="md:col-span-2 space-y-3">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 rounded-lg bg-igreen-500 flex items-center justify-center text-igreen-950 font-bold">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <span class="font-display font-extrabold text-xl text-white">iGreen <span class="text-igreen-400">Energy</span></span>
+                    </div>
+                    <p class="text-xs text-emerald-200/70 max-w-md leading-relaxed">
+                        Democratizando o acesso à energia limpa e renovável em todo o Brasil sem obras, sem investimento e sem fidelidade. Modelo de geração distribuída amparado pela Lei Federal nº 14.300/2022 e Resolução Normativa ANEEL nº 482/687.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-bold text-white mb-3 text-xs uppercase tracking-wider">Navegação Rápida</h4>
+                    <ul class="space-y-2 text-xs text-emerald-200/80">
+                        <li><a href="#simulador" class="hover:text-igreen-400 transition">Simulador de Economia</a></li>
+                        <li><a href="#solucoes" class="hover:text-igreen-400 transition">Conexão Green & Conexão Livre</a></li>
+                        <li><a href="#ecossistema" class="hover:text-igreen-400 transition">iGreen Club & Cashback</a></li>
+                        <li><a href="#como-funciona" class="hover:text-igreen-400 transition">Como Funciona</a></li>
+                        <li><a href="#duvidas" class="hover:text-igreen-400 transition">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-display font-bold text-white mb-3 text-xs uppercase tracking-wider">Painel do Licenciado</h4>
+                    <p class="text-xs text-emerald-200/70 mb-3">
+                        É o licenciado responsável por esta página? Configure seu telefone e link de indicação:
+                    </p>
+                    <button onclick="openConfigModal()" class="inline-flex items-center gap-2 text-xs font-bold text-igreen-400 hover:text-igreen-300 bg-emerald-900/70 px-3.5 py-2 rounded-lg border border-emerald-700 cursor-pointer">
+                        <i class="fa-solid fa-sliders"></i> Configurar Meus Dados
+                    </button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-emerald-200/60 gap-4">
+                <p>© 2026 iGreen Energy — Página de Divulgação de Licenciado Autorizado. Todos os direitos reservados.</p>
+                <p class="flex items-center gap-2">
+                    <i class="fa-solid fa-solar-panel text-igreen-400"></i> Energia 100% Limpa e Renovável
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         BOTÃO FLUTUANTE DE WHATSAPP + NOTIFICAÇÃO
+    =========================================== -->
+    <div class="fixed bottom-5 right-5 z-50 flex items-center gap-3">
+        <!-- Balão de Notificação -->
+        <div id="floatingWaTooltip" class="hidden sm:flex items-center gap-2.5 bg-white text-slate-800 px-4 py-2.5 rounded-2xl shadow-xl border border-slate-200 text-xs font-semibold">
+            <span class="w-2.5 h-2.5 rounded-full bg-igreen-500 animate-ping"></span>
+            <span>Simule seu desconto em <strong>1 minuto!</strong></span>
+            <button onclick="document.getElementById('floatingWaTooltip').classList.add('hidden')" class="text-slate-400 hover:text-slate-600 ml-1" title="Fechar aviso">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Botão Redondo Pulsante -->
+        <button onclick="openQuickProspectModal()" class="wa-pulse w-16 h-16 rounded-full bg-igreen-500 hover:bg-igreen-600 text-white flex items-center justify-center shadow-2xl transition transform hover:scale-105 cursor-pointer relative" title="Simular Desconto pelo WhatsApp">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-extrabold flex items-center justify-center border-2 border-white">1</span>
+        </button>
+    </div>
+
+    <!-- ==========================================
+         MODAL 1: PROSPECÇÃO RÁPIDA WHATSAPP (FLOATING CTA)
+    =========================================== -->
+    <div id="quickProspectModal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border border-slate-200 animate-fadeIn">
+            <!-- Header Verde WhatsApp/iGreen -->
+            <div class="bg-gradient-to-r from-igreen-900 to-igreen-700 p-6 text-white flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-igreen-500 flex items-center justify-center text-2xl shadow-md">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-extrabold text-lg leading-tight">Atendimento Rápido iGreen</h3>
+                        <p class="text-xs text-emerald-100 flex items-center gap-1.5 mt-0.5">
+                            <span class="w-2 h-2 rounded-full bg-igreen-400"></span> Online agora • Resposta imediata
+                        </p>
+                    </div>
+                </div>
+                <button onclick="closeQuickProspectModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form onsubmit="submitQuickProspectModal(event)" class="p-6 space-y-4">
+                <div class="bg-igreen-50 border border-igreen-200 rounded-2xl p-3.5 text-xs text-igreen-950">
+                    👋 Olá! Preencha abaixo para iniciar a conversa no WhatsApp já com o seu cálculo de desconto pronto:
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Seu Nome *</label>
+                    <input type="text" id="modalProspectName" required placeholder="Digite seu nome..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:border-igreen-500">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Valor da Conta (R$)</label>
+                        <input type="number" id="modalProspectBill" min="100" step="10" value="450" required class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-igreen-700 focus:outline-none focus:border-igreen-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-slate-600 mb-1">Interesse Principal</label>
+                        <select id="modalProspectGoal" class="w-full px-3 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm focus:outline-none focus:border-igreen-500">
+                            <option value="Conexão Green (Desconto na Conta)">Desconto na Conta</option>
+                            <option value="Conexão Livre (Empresas Grupo A)">Empresa (Grupo A)</option>
+                            <option value="Conexão Placas (Instalar Sistema)">Instalar Placas</option>
+                            <option value="Ser um Licenciado iGreen">Ser Licenciado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-igreen-500 hover:bg-igreen-600 text-white font-display font-extrabold text-sm py-4 rounded-xl shadow-glow transition flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Iniciar Conversa no WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MODAL 2: PAINEL DE CONFIGURAÇÃO DO CONSULTOR (MODO LICENCIADO)
+    =========================================== -->
+    <div id="consultantConfigModal" class="fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200">
+            <!-- Header do Painel -->
+            <div class="bg-igreen-950 p-6 text-white flex items-center justify-between border-b border-emerald-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-igreen-500/20 border border-igreen-400 text-igreen-400 flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] font-extrabold uppercase tracking-widest text-igreen-400 block">Modo Licenciado Autorizado</span>
+                        <h3 class="font-display font-extrabold text-lg">Configurar Meu WhatsApp de Prospecção</h3>
+                    </div>
+                </div>
+                <button onclick="closeConfigModal()" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form onsubmit="saveConsultantConfig(event)" class="p-6 space-y-4">
+                <p class="text-xs text-slate-600 bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+                    Configure seus dados abaixo. Eles ficarão salvos neste navegador (<code class="text-igreen-700 font-bold">localStorage</code>) e <strong>todos os botões e simuladores da página</strong> encaminharão os clientes diretamente para o seu WhatsApp!
+                </p>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                        Seu Nome / Nome de Consultor *
+                    </label>
+                    <input type="text" id="cfgName" required placeholder="Ex: Carlos Eduardo - Licenciado iGreen" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm font-medium focus:outline-none focus:border-igreen-500">
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-3.5">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                            WhatsApp com DDD (Apenas números) *
+                        </label>
+                        <input type="tel" id="cfgPhone" required placeholder="Ex: 31999999999" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm font-bold text-igreen-700 focus:outline-none focus:border-igreen-500">
+                        <span class="text-[10px] text-slate-400">Ex: 27998887777 (O código 55 é automático)</span>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                            Código de Licenciado iGreen
+                        </label>
+                        <input type="text" id="cfgCode" placeholder="Ex: ID #48620" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm font-medium focus:outline-none focus:border-igreen-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                        Link Oficial de Indicação / Cadastro Digital (Opcional)
+                    </label>
+                    <input type="url" id="cfgLink" placeholder="Ex: https://digital.igreenenergy.com.br/?id=SEU_ID" class="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-sm font-medium focus:outline-none focus:border-igreen-500">
+                    <span class="text-[10px] text-slate-400">Se preenchido, ativa um botão extra de "Cadastro Digital Direto" no rodapé e pode ser incluído nas mensagens.</span>
+                </div>
+
+                <!-- Notificação de Sucesso Interna -->
+                <div id="cfgSuccessAlert" class="hidden bg-igreen-50 border border-igreen-400 text-igreen-900 px-4 py-3 rounded-xl text-xs font-bold flex items-center gap-2">
+                    <i class="fa-solid fa-circle-check text-igreen-600 text-base"></i>
+                    <span>Dados salvos com sucesso! Todos os botões de WhatsApp foram atualizados.</span>
+                </div>
+
+                <div class="pt-2 flex flex-col sm:flex-row items-center justify-end gap-3 border-t border-slate-100">
+                    <button type="button" onclick="testConsultantWhatsApp()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold text-xs flex items-center justify-center gap-1.5 cursor-pointer">
+                        <i class="fa-brands fa-whatsapp text-igreen-600"></i> Testar Meu Link
+                    </button>
+                    <button type="submit" class="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-igreen-500 hover:bg-igreen-600 text-white font-display font-bold text-xs shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                        <i class="fa-solid fa-floppy-disk"></i> Salvar Configuração
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         TOAST DE NOTIFICAÇÃO CUSTOMIZADO (SEM ALERT)
+    =========================================== -->
+    <div id="customToast" class="fixed top-24 right-5 z-50 hidden bg-igreen-950 text-white px-5 py-3.5 rounded-2xl shadow-2xl border border-igreen-500 flex items-center gap-3 text-xs font-semibold">
+        <i class="fa-solid fa-circle-check text-igreen-400 text-lg"></i>
+        <span id="customToastMsg">Configuração atualizada!</span>
+    </div>
+
+    <!-- ==========================================
+         JAVASCRIPT: LÓGICA DOS SIMULADORES, WHATSAPP & LOCALSTORAGE
+    =========================================== -->
+    <script>
+        // Estado Global do Consultor (com fallback padrão)
+        const DEFAULT_CONSULTANT = {
+            name: 'Consultor Autorizado iGreen',
+            phone: '5531999999999',
+            code: 'ID #Oficial',
+            referralLink: ''
+        };
+
+        let consultantData = { ...DEFAULT_CONSULTANT };
+
+        // Estado do Simulador Principal
+        let simState = {
+            propertyType: 'Residencial',
+            discountRate: 0.15, // 15% padrão na energia injetada
+            billValue: 600,
+            minTax: 50,
+            utility: 'CEMIG (Minas Gerais)',
+            monthlySavings: 82.50,
+            annualSavings: 990.00,
+            fiveYearSavings: 4950.00,
+            newTotalBill: 517.50
+        };
+
+        // Formatar Moeda Real (BRL)
+        function formatBRL(value) {
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        // Formatar Telefone para Exibição
+        function formatPhoneDisplay(rawPhone) {
+            let digits = rawPhone.replace(/\D/g, '');
+            if (digits.startsWith('55') && digits.length >= 12) {
+                digits = digits.substring(2);
+            }
+            if (digits.length === 11) {
+                return `(${digits.substring(0,2)}) ${digits.substring(2,7)}-${digits.substring(7)}`;
+            } else if (digits.length === 10) {
+                return `(${digits.substring(0,2)}) ${digits.substring(2,6)}-${digits.substring(6)}`;
+            }
+            return rawPhone;
+        }
+
+        // Normalizar Telefone para Link wa.me (garante DDI 55)
+        function normalizePhoneForWa(rawPhone) {
+            let digits = (rawPhone || '').replace(/\D/g, '');
+            if (!digits) return '5531999999999';
+            if (!digits.startsWith('55') && (digits.length === 10 || digits.length === 11)) {
+                digits = '55' + digits;
+            }
+            return digits;
+        }
+
+        // Carregar Configuração do Consultor do localStorage
+        function loadConsultantConfig() {
+            try {
+                const saved = localStorage.getItem('igreen_consultant_config_v1');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    consultantData = {
+                        name: parsed.name || DEFAULT_CONSULTANT.name,
+                        phone: normalizePhoneForWa(parsed.phone || DEFAULT_CONSULTANT.phone),
+                        code: parsed.code || DEFAULT_CONSULTANT.code,
+                        referralLink: parsed.referralLink || ''
+                    };
+                }
+            } catch (err) {
+                console.warn('Erro ao ler localStorage:', err);
+            }
+            updateConsultantUI();
+        }
+
+        // Atualizar Elementos da Interface com Dados do Consultor
+        function updateConsultantUI() {
+            document.getElementById('topBarConsultantName').textContent = consultantData.name;
+            document.getElementById('topBarConsultantCode').textContent = consultantData.code;
+            document.getElementById('footerConsultantName').textContent = consultantData.name;
+            document.getElementById('footerConsultantCode').textContent = consultantData.code;
+            document.getElementById('footerConsultantPhone').textContent = formatPhoneDisplay(consultantData.phone);
+
+            const refBtn = document.getElementById('footerReferralLinkBtn');
+            if (consultantData.referralLink && consultantData.referralLink.startsWith('http')) {
+                refBtn.href = consultantData.referralLink;
+                refBtn.classList.remove('hidden');
+                refBtn.classList.add('inline-flex');
+            } else {
+                refBtn.classList.add('hidden');
+                refBtn.classList.remove('inline-flex');
+            }
+        }
+
+        // Abrir / Fechar Modal de Configuração do Consultor
+        function openConfigModal() {
+            let displayDigits = consultantData.phone.replace(/\D/g, '');
+            if (displayDigits.startsWith('55') && displayDigits.length >= 12) {
+                displayDigits = displayDigits.substring(2);
+            }
+            document.getElementById('cfgName').value = consultantData.name;
+            document.getElementById('cfgPhone').value = displayDigits;
+            document.getElementById('cfgCode').value = consultantData.code;
+            document.getElementById('cfgLink').value = consultantData.referralLink || '';
+            document.getElementById('cfgSuccessAlert').classList.add('hidden');
+            document.getElementById('consultantConfigModal').classList.remove('hidden');
+        }
+
+        function closeConfigModal() {
+            document.getElementById('consultantConfigModal').classList.add('hidden');
+        }
+
+        // Salvar Configuração do Consultor no localStorage
+        function saveConsultantConfig(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('cfgName').value.trim() || DEFAULT_CONSULTANT.name;
+            const phoneInput = document.getElementById('cfgPhone').value.trim() || DEFAULT_CONSULTANT.phone;
+            const codeInput = document.getElementById('cfgCode').value.trim() || 'ID #Oficial';
+            const linkInput = document.getElementById('cfgLink').value.trim();
+
+            consultantData = {
+                name: nameInput,
+                phone: normalizePhoneForWa(phoneInput),
+                code: codeInput,
+                referralLink: linkInput
+            };
+
+            try {
+                localStorage.setItem('igreen_consultant_config_v1', JSON.stringify(consultantData));
+            } catch (err) {
+                console.warn('Não foi possível salvar no localStorage:', err);
+            }
+
+            updateConsultantUI();
+            document.getElementById('cfgSuccessAlert').classList.remove('hidden');
+            showToast('WhatsApp do Consultor configurado com sucesso!');
+            setTimeout(() => {
+                closeConfigModal();
+            }, 1100);
+        }
+
+        // Testar Link de WhatsApp no Modal do Consultor
+        function testConsultantWhatsApp() {
+            const rawPhone = document.getElementById('cfgPhone').value.trim() || consultantData.phone;
+            const name = document.getElementById('cfgName').value.trim() || consultantData.name;
+            const waNumber = normalizePhoneForWa(rawPhone);
+            const msg = `Olá, *${name}*! Estou testando o link de prospecção da minha Landing Page Oficial da *iGreen Energy*. Tudo funcionando perfeitamente!`;
+            window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        // Exibir Toast Customizado
+        function showToast(message) {
+            const toast = document.getElementById('customToast');
+            document.getElementById('customToastMsg').textContent = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3500);
+        }
+
+        // ==========================================
+        // MINI-SIMULADOR DO HERO
+        // ==========================================
+        function updateHeroMiniCalc() {
+            const bill = parseFloat(document.getElementById('heroBillRange').value) || 450;
+            const utilitySelect = document.getElementById('heroUtility');
+            const selectedOption = utilitySelect.options[utilitySelect.selectedIndex];
+            const baseRate = parseFloat(selectedOption.getAttribute('data-rate')) || 0.15;
+
+            document.getElementById('heroBillBadge').textContent = `R$ ${bill.toLocaleString('pt-BR')}/mês`;
+
+            const monthlySavings = bill * baseRate;
+            const annualSavings = monthlySavings * 12;
+
+            document.getElementById('heroMonthlySavings').textContent = `~ ${formatBRL(monthlySavings)}`;
+            document.getElementById('heroAnnualSavings').textContent = formatBRL(annualSavings);
+        }
+
+        function submitHeroLead(e) {
+            e.preventDefault();
+            const clientName = document.getElementById('heroName').value.trim();
+            const utility = document.getElementById('heroUtility').value;
+            const propType = document.getElementById('heroPropertyType').value;
+            const bill = parseFloat(document.getElementById('heroBillRange').value) || 450;
+            const monthlySavings = bill * 0.15;
+            const annualSavings = monthlySavings * 12;
+
+            const message = 
+`Olá, *${consultantData.name}*! 🌿
+Acabei de simular meu desconto na página da *iGreen Energy* e quero ativar meu benefício!
+
+👤 *Nome/Empresa:* ${clientName}
+🏢 *Tipo de Imóvel:* ${propType}
+⚡ *Concessionária:* ${utility}
+💡 *Valor Médio da Conta:* ${formatBRL(bill)}/mês
+💰 *Economia Estimada:* ~${formatBRL(annualSavings)}/ano (${formatBRL(monthlySavings)}/mês)
+
+Como faço para enviar minha fatura e garantir o desconto + acesso ao iGreen Club?`;
+
+            openWhatsAppUrl(message);
+        }
+
+        // ==========================================
+        // SIMULADOR INTERATIVO PRINCIPAL + FATURA
+        // ==========================================
+        function setSimProperty(typeName, rate, btnElement) {
+            simState.propertyType = typeName;
+            simState.discountRate = rate;
+
+            // Atualizar estilo visual dos botões
+            const buttons = document.querySelectorAll('#simPropertyButtons .sim-prop-btn');
+            buttons.forEach(btn => {
+                btn.className = 'sim-prop-btn flex flex-col items-center justify-center p-3.5 rounded-2xl border border-slate-200 hover:border-igreen-300 bg-slate-50 text-slate-700 font-semibold text-xs transition cursor-pointer';
+                const icon = btn.querySelector('i');
+                if (icon) icon.className = icon.className.replace('text-igreen-600', 'text-slate-500');
+            });
+
+            btnElement.className = 'sim-prop-btn active-prop flex flex-col items-center justify-center p-3.5 rounded-2xl border-2 border-igreen-500 bg-igreen-50/70 text-igreen-950 font-bold text-xs transition cursor-pointer';
+            const activeIcon = btnElement.querySelector('i');
+            if (activeIcon) activeIcon.className = activeIcon.className.replace('text-slate-500', 'text-igreen-600');
+
+            calculateMainSimulator();
+        }
+
+        function setQuickBill(val) {
+            document.getElementById('simBillSlider').value = val;
+            calculateMainSimulator();
+        }
+
+        function calculateMainSimulator() {
+            const bill = parseFloat(document.getElementById('simBillSlider').value) || 600;
+            const minTax = parseFloat(document.getElementById('simPhaseSelect').value) || 50;
+            const utility = document.getElementById('simUtilitySelect').value;
+
+            simState.billValue = bill;
+            simState.minTax = minTax;
+            simState.utility = utility;
+
+            // Energia compensável pela usina solar (Valor da fatura menos taxa mínima da distribuidora)
+            const compensableAmount = Math.max(bill - minTax, bill * 0.85);
+            const monthlySavings = compensableAmount * simState.discountRate;
+            const annualSavings = monthlySavings * 12;
+            const fiveYearSavings = annualSavings * 5;
+
+            const igreenPortion = compensableAmount - monthlySavings;
+            const newTotalBill = minTax + igreenPortion;
+
+            simState.monthlySavings = monthlySavings;
+            simState.annualSavings = annualSavings;
+            simState.fiveYearSavings = fiveYearSavings;
+            simState.newTotalBill = newTotalBill;
+
+            // Atualizar Exibição dos Valores
+            document.getElementById('simBillDisplay').textContent = formatBRL(bill);
+            document.getElementById('resMonthly').textContent = formatBRL(monthlySavings);
+            document.getElementById('resAnnual').textContent = formatBRL(annualSavings);
+            document.getElementById('resFiveYears').textContent = formatBRL(fiveYearSavings);
+
+            // Impacto Ambiental (estimativa proporcional ao consumo em kWh)
+            const estimatedKwhMonth = bill / 0.92;
+            const co2KgYear = Math.round(estimatedKwhMonth * 12 * 0.085);
+            const treesSaved = Math.max(2, Math.round(co2KgYear / 38));
+
+            document.getElementById('resTrees').textContent = `${treesSaved} árvores`;
+            document.getElementById('resCO2').textContent = `${co2KgYear.toLocaleString('pt-BR')} kg`;
+
+            // Atualizar Demonstrativo Antes e Depois da Fatura
+            document.getElementById('billBeforeTotal').textContent = formatBRL(bill);
+            document.getElementById('demoOriginalBill').textContent = formatBRL(bill);
+            document.getElementById('demoSolarCredits').textContent = `- ${formatBRL(compensableAmount)}`;
+            document.getElementById('demoMinTax').textContent = formatBRL(minTax);
+            document.getElementById('demoIgreenBill').textContent = formatBRL(igreenPortion);
+            document.getElementById('demoSavedBadge').textContent = `${formatBRL(monthlySavings)}/mês`;
+            document.getElementById('billAfterTotal').textContent = formatBRL(newTotalBill);
+        }
+
+        function triggerWhatsAppFromSimulator() {
+            const message = 
+`Olá, *${consultantData.name}*! 🌿
+Fiz a simulação completa da minha fatura no site da *iGreen Energy* e quero garantir essa economia:
+
+📊 *RESUMO DA MINHA SIMULAÇÃO:*
+• *Perfil do Imóvel:* ${simState.propertyType}
+• *Concessionária:* ${simState.utility}
+• *Valor Atual da Conta:* ${formatBRL(simState.billValue)}/mês
+• *Novo Valor Estimado c/ iGreen:* ${formatBRL(simState.newTotalBill)}/mês
+• *Economia Mensal:* ${formatBRL(simState.monthlySavings)}
+• *Economia em 1 Ano:* *${formatBRL(simState.annualSavings)}*
+• *Economia em 5 Anos:* *${formatBRL(simState.fiveYearSavings)}*
+
+Quero ativar a *Conexão Green* sem obras e sem fidelidade! Como faço o envio da minha conta?`;
+
+            openWhatsAppUrl(message);
+        }
+
+        // ==========================================
+        // SIMULADOR DE CASHBACK / INDICAÇÕES
+        // ==========================================
+        function updateReferralCalc() {
+            const friends = parseInt(document.getElementById('refSlider').value) || 5;
+            document.getElementById('refCountBadge').textContent = friends === 1 ? '1 amigo' : `${friends} amigos`;
+            // Bônus direto + recorrência anual estimada
+            const estimatedAnnualBonus = friends * 85;
+            document.getElementById('refBonusResult').textContent = `Até ${formatBRL(estimatedAnnualBonus)}/ano em créditos`;
+        }
+
+        // ==========================================
+        // DISPAROS DE WHATSAPP POR SEÇÃO / SOLUÇÃO
+        // ==========================================
+        function triggerWhatsAppSolution(solutionName) {
+            const message = 
+`Olá, *${consultantData.name}*! 🌿
+Vi o portfólio oficial da *iGreen Energy* e tenho interesse na modalidade:
+👉 *${solutionName}*
+
+Poderia me explicar como funciona a análise gratuita para minha conta de luz?`;
+            openWhatsAppUrl(message);
+        }
+
+        function triggerWhatsAppGeneral(origin) {
+            const message = 
+`Olá, *${consultantData.name}*! 🌿
+Gostaria de ativar meu desconto de até 20% na conta de luz com a *iGreen Energy* (sem obras e sem fidelidade) e ter acesso gratuito ao *iGreen Club*.
+
+Posso te enviar uma foto da minha fatura por aqui para análise gratuita?`;
+            openWhatsAppUrl(message);
+        }
+
+        function openWhatsAppUrl(textMessage) {
+            const waPhone = normalizePhoneForWa(consultantData.phone);
+            const encodedText = encodeURIComponent(textMessage);
+            window.open(`https://wa.me/${waPhone}?text=${encodedText}`, '_blank');
+        }
+
+        // ==========================================
+        // MODAL DE PROSPECÇÃO RÁPIDA (BOTÃO FLUTUANTE)
+        // ==========================================
+        function openQuickProspectModal() {
+            document.getElementById('quickProspectModal').classList.remove('hidden');
+        }
+
+        function closeQuickProspectModal() {
+            document.getElementById('quickProspectModal').classList.add('hidden');
+        }
+
+        function submitQuickProspectModal(e) {
+            e.preventDefault();
+            const name = document.getElementById('modalProspectName').value.trim();
+            const bill = parseFloat(document.getElementById('modalProspectBill').value) || 450;
+            const goal = document.getElementById('modalProspectGoal').value;
+            const estAnnual = (bill * 0.15 * 12);
+
+            const message = 
+`Olá, *${consultantData.name}*! 🌿
+Meu nome é *${name}* e quero atendimento rápido sobre a *iGreen Energy*.
+
+📌 *Interesse:* ${goal}
+💡 *Valor médio da minha conta:* ${formatBRL(bill)}/mês
+💰 *Economia anual estimada:* ~${formatBRL(estAnnual)}/ano
+
+Podemos conversar?`;
+
+            closeQuickProspectModal();
+            openWhatsAppUrl(message);
+        }
+
+        // ==========================================
+        // ACCORDION DO FAQ E MENU MOBILE
+        // ==========================================
+        function toggleFaq(index) {
+            const content = document.getElementById(`faqContent-${index}`);
+            const icon = document.getElementById(`faqIcon-${index}`);
+            const isHidden = content.classList.contains('hidden');
+
+            // Fechar todos
+            for (let i = 0; i < 5; i++) {
+                document.getElementById(`faqContent-${i}`).classList.add('hidden');
+                document.getElementById(`faqIcon-${i}`).classList.remove('rotate-180');
+            }
+
+            if (isHidden) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('mobileMenuIcon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-lg';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-lg';
+            }
+        }
+
+        // Inicialização ao carregar a página
+        window.onload = function () {
+            loadConsultantConfig();
+            updateHeroMiniCalc();
+            calculateMainSimulator();
+            updateReferralCalc();
+            // Abre o primeiro item do FAQ com ícone rotacionado
+            document.getElementById('faqIcon-0').classList.add('rotate-180');
+        };
+    </script>
+</body>
+</html>
